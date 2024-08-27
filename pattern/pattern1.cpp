@@ -1,3 +1,4 @@
+/*   
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
@@ -15,3 +16,35 @@ int main(){
     }
     return 0;
 }
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+void pattern2(int a){
+     for(int i = 0;i<a ; i++ ){
+        for(int j = 0;j<a;j++){
+            cout<<"*" ;
+        }
+        cout<<endl ;
+     }
+}
+
+
+void pattern3(int a){
+    for(int i = 0; i<a ; i++){
+        for(int j = 0;j<= i; j++){
+            cout<<"*";
+        }
+        cout<<endl ;
+    }
+}
+
+int main(){
+ int a;
+ cout<<"Enter the no. ";
+ cin>>a;
+ pattern3(a);
+ return 0;
+}
+
+
