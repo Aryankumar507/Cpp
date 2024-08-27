@@ -54,11 +54,19 @@ void pattern5(int a){
     }
 }
 
+void pattern6(int a){
+    for(int i = a;i>0;i--){
+        for(int j = i;j>0;j--){
+            cout<<"*"<<" ";
+        }
+        cout<<endl;
+    }
+}
 int main(){
  int a;
  cout<<"Enter the no. ";
  cin>>a;
- pattern5(a);
+ pattern6(a);
  return 0;
 }
 
