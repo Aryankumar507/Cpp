@@ -62,11 +62,22 @@ void pattern6(int a){
         cout<<endl;
     }
 }
+
+void pattern7(int a){
+    for(int i = a;i>0;i--){
+        for(int j = 1;j<=i;j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
 int main(){
  int a;
  cout<<"Enter the no. ";
  cin>>a;
- pattern6(a);
+ pattern7(a);
  return 0;
 }
 
