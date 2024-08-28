@@ -72,12 +72,43 @@ void pattern7(int a){
     }
 }
 
+void pattern8(int a){
+for(int i = 1;i<=a;i++){
+    for(int j = 1;j<=a-i;j++){
+        cout<<" ";
+    }
+    for(int j = 1;j<=(2*i)-1;j++){
+        cout<<"*";
+    }
+     for(int j = 1;j<=a-i;j++){
+        cout<<" ";
+    }
+    cout<<endl;
+}
+}
+
+void pattern9(int a){
+    for(int i = 0;i<a;i++){
+        for(int j = 0;j<i;j++){
+            cout<<" ";
+        }
+        for(int j = (2*(a-i)) - 1 ; j>0 ;j--){
+            cout<<"*";
+        }
+         for(int j = 0;j<i;j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
 
 int main(){
  int a;
  cout<<"Enter the no. ";
  cin>>a;
- pattern7(a);
+ pattern9(a);
  return 0;
 }
 
