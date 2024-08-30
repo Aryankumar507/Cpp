@@ -181,11 +181,41 @@ void pattern12(int a){
     }
 }
 
+void pattern13(int a){
+    for(int i = 1;i<=a;i++){
+        for(int j = 0;j<i;j++){
+            cout<<(j+1);
+        }
+
+        for(int j = 0;j<2*(a-i);j++){
+            cout<<" ";
+        }
+
+          for(int j = 0;j<i;j++){
+            int diff = i-j;
+            cout<<diff;
+        }
+        cout<<endl;
+    }
+}
+
+pattern14(int a){
+int m = 0;
+for(int i = 0;i<a;i++){
+    for(int j = 0;j<=i;j++){
+        m = m+1;
+        cout<<m;
+    }
+    cout<<endl;
+}
+}
+
+
 int main(){
  int a;
  cout<<"Enter the no. ";
  cin>>a;
- pattern12(a);
+ pattern14(a);
  return 0;
 }
 
