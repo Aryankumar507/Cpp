@@ -164,10 +164,23 @@ void pattern23(int a){
     }
 }
 
+void pattern23a(int a){
+    for(int i = 0;i<(2*a)-1;i++){
+        for(int j = 0;j<(2*a)-1;j++){
+            int top = i;
+            int left = j;
+            int right  = ((2*a)-2)-j;
+            int bottom = ((2*a)-2)-i;
+            cout<<a-min(min(top,bottom),min(right,left));
+        }
+        cout<<endl;
+    }
+}
+
 int main(){
     int a;
     cout<<"Enter the no. ";
     cin>>a;
-    pattern23(a);
+    pattern23a(a);
     return 0;
 }
