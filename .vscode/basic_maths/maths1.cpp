@@ -72,9 +72,64 @@ void ques6(int n){
         cout<<"false";}
 }
 
+// Print all divisions of the given no.
+void ques7(int n){
+    for(int i = 1;i<=n;i++){
+        if(n%i == 0){
+            cout<<i<<" ";
+        }
+    }
+}
+
+// Another methode to reduce the time complexity of the previous question;
+void ques8(int n){
+    vector<int> ls;
+    for(int i = 1;(i*i)<=n;i++){
+        if(n%i == 0){
+            ls.push_back(i);
+              if((n/i) != i){
+                ls.push_back(n/i);
+        }
+        }
+    }
+       sort(ls.begin(),ls.end());
+       for(auto it : ls)cout<<it<<" ";  
+}
+
+// find out the prime no.
+void ques9(int n){
+    int count = 0;
+for(int i =1;i<=n;i++){
+    if(n%i == 0){
+        count++;
+    }
+}
+if(count == 2){
+    cout<<"true";
+}
+else{
+    cout<<"false";
+}
+}
+
+// another method
+void ques10(int n){
+    int ct = 0;
+    for(int i = 1;(i*i)<=n;i++){
+        if(n%i==0){
+            ct++;
+        }
+    }
+    if((ct*2)==2)cout<<"true";
+    else cout<<"false";
+}
+
+// GCD and HCF
+
+
 int main(){
 int n;
 cout<<"Enter your no: ";
 cin>>n;
-ques6(n);
+ques10(n);
 }
