@@ -1,17 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+int factorial(int num){
+    if(num == 1) return 1 ;
+    return num*factorial(num-1) ;
+}
+
 int main(){
-    int age;
-    cin >> age ;
-    if(age>=18){
-        cout << "you are an adult!";
-    }
-    else if(age <18 && age >= 12){
-        cout << "you are a teenager!";
-    }
-    else{
-        cout << "you are a child!";
-    }
-    return 0;
+    int a;
+    int fac = 1;
+  cout<<"Enter your no. ";
+  cin>>a;
+  for(int i = a;i>0;i--){
+    fac = fac*i;
+  }
+  cout<<fac << endl;
+
+      cout << factorial(a) << endl ;
 }
