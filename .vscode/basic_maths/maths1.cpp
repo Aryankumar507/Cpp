@@ -125,11 +125,33 @@ void ques10(int n){
 }
 
 // GCD and HCF
-
-
+// for finding GCD of two numbers;
+void ques11(int n1,int n2){
+    int x = 0;
+    if(n1>n2){
+        ques11(n2,n1);
+    }
+    for(int i = 1;i<=n1;i++){
+       if(n1%i==0 && n2%i==0){
+        x = i;
+       }
+    }
+}
+// Eucliden Algoritum
+void ques12(int n1,int n2){
+    while(n1>0 && n2>0){
+        if(n1>n2){
+            n1 = n1%n2;
+        }
+        else{
+            n2 = n2%n1;
+        }
+    }
+    if(n1 == 0)cout<<n2;
+    else cout<<n1;
+}
 int main(){
-int n;
 cout<<"Enter your no: ";
-cin>>n;
-ques10(n);
+
+ques12(12,4);
 }
