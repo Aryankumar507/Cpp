@@ -78,11 +78,36 @@ int ques8(int n){
        return n*ques8(n-1);
     }
 }
+// Here TC is 0(n) as well as SC is 0(n)
+// Reverse the number using the array;
 
+void ques9(int m,int array[],int n){
+    if(m>=n/2){
+       return;
+    }
+swap(array[m],array[n-m-1]);
+ques9(m+1,array,n);
+}
+
+// Check the given string is paladrone or not
+// we can use array
+
+
+void ques10(string n,int l){
+    int len = n.size();
+     if(n[l] >= n[len/2] ){
+     cout<<"True";
+     return;
+    }
+    if(n[l]!=n[(len-l-1)]){
+        cout<<"False";
+        return;
+    }
+    ques10(n,l+1);
+}
 int main(){
-int n;
-cin>>n;
-int m = ques8(n);
-cout<<m;
+string n;
+getline(cin,n);
+ques10(n,0);
 return 0;
 }
